@@ -1,5 +1,8 @@
-const pokeAPI = {
+const pokeAPI = {}
 
+pokeAPI.getPokemonDetail = function (pokemon) {
+    return fetch(pokemon.url)
+            .then((response) => response.json())
 }
 
 pokeAPI.getPokemons = function (offset = 0, limit = 10) {
@@ -8,6 +11,9 @@ pokeAPI.getPokemons = function (offset = 0, limit = 10) {
     return fetch(url)
     .then((response) => response.json())
     .then((jsonBody) => jsonBody.results)
+    .then((pokemons) => pokemons.map(pokeAPI.getPokemonDetail) )
+    .then((detailRequests) => Promise.all(detailRequests))
+    .then((pokemonDetails) => (pokemonDetails))
     .catch((error) => console.error(error));
     
     
