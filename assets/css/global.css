@@ -1,5 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 .content {
@@ -21,5 +22,12 @@
     background-color: #14A06F;
     color: white;
     border-radius: 1rem;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemons li img {
+    max-width: 100%;
+    max-height: 120px;
+    align-self: flex-end;
 }
