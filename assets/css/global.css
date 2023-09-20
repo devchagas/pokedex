@@ -3,31 +3,25 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F6F8FC;
+}
+
 .content {
     padding: 1rem;
+    background-color: white;
+    height: 100vh;
+    width: 100vh;
 }
 
-.pokemons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 992px) {
+    .content {
+        height: auto;
+        max-width: 992px;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
 }
 
-.pokemons li {
-    font-weight: bold;
-    margin: .5rem;
-    padding: 2rem 1rem;
-    background-color: #14A06F;
-    color: white;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-}
 
-.pokemons li img {
-    max-width: 100%;
-    max-height: 120px;
-    align-self: flex-end;
-}
+
