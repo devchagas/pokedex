@@ -32,6 +32,6 @@ pokeAPI.getPokemons = function (offset = 0, limit = 5) {
     .then((pokemons) => pokemons.map(pokeAPI.getPokemonDetail) )
     .then((detailRequests) => Promise.all(detailRequests))
     .then((pokemonDetails) => (pokemonDetails))
-    
-    
 }
+
+

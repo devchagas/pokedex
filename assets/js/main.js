@@ -1,14 +1,19 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
-const showDetailButton = document.getElementById('showDets')
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
+
 
 const maxRecords = 151
 const limit = 10
 let offset = 0
 
+function convertPokemonDetail(pokemon) {
+    return `
+        <h1>${pokemon.name}</h1>
+    `
+}
 
 function convertPokemonToList(pokemon) {
-    return ` 
+    return  ` 
     <li class="pokemon ${pokemon.type}">
     <span class="number">#${pokemon.order}</span>
     <span class="name">${pokemon.name}</span>
@@ -23,9 +28,9 @@ function convertPokemonToList(pokemon) {
         </div>  
 
         <div class="showDetail">
-            <a href="details.html" class="showDets ${pokemon.type}">
+            <button id="pokeDetails" onClick="redirect(${pokemon.order})" class="showDets ${pokemon.type}">
                 <img src="assets/images/pokemon-icon.webp">
-            </a>
+            </button>
         </div>
     </li>
 `
@@ -37,6 +42,7 @@ function loadPokemonItems(offset, limit) {
         pokemonList.innerHTML += newHTML
     })
 }
+
 
 loadPokemonItems(offset, limit)
 
@@ -55,9 +61,12 @@ loadMoreButton.addEventListener('click', () => {
     }   
 })
 
-showDetailButton.addEventListener('click', () => {
+function redirect(id) {
+    window.open('details.html?id=' + id, '_self');
+}
 
-})
+
+
 
 
 
