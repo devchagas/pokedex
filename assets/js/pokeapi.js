@@ -14,7 +14,26 @@ function convertPokeAPItoModel(pokeDetail) {
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
+    pokemon.height = convertHeightWeightToDecimal(pokeDetail.height);
+    pokemon.weight = convertHeightWeightToDecimal(pokeDetail.weight);
+
+    const abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name)
+    pokemon.abilities = abilities
+
+    pokemon.HP = pokeDetail.stats[0].base_stat
+    pokemon.Attack = pokeDetail.stats[1].base_stat
+    pokemon.Defense = pokeDetail.stats[2].base_stat
+    pokemon.Speed = pokeDetail.stats[5].base_stat
+
     return pokemon
+}
+
+function convertHeightWeightToDecimal(number) {
+    return number = number / 10;
+}
+
+function convertPB(number) {
+    return (number * (85 / 100)) / 1
 }
 
 pokeAPI.getPokemonDetail = function (pokemon) {

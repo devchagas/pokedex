@@ -9,12 +9,28 @@ h1 {
     margin-bottom: 0;
     padding-bottom: 0;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     display: flex;
     flex-direction: column;
 }
 
 .dets {
+    justify-content: space-between;
+    margin: .5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 140%;
+}
+
+.dets .about {
     justify-content: center;
     margin: .5rem;
     margin-bottom: 0;
@@ -22,10 +38,127 @@ h1 {
     padding-top: 0;
     margin-top: 0;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0 0 1rem 1rem;
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 140%;
+}
+
+.dets .stats {
+    margin: .5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 140%;
+    width: 40%;
+}
+
+.dets h4 {
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+.dets h5 {
+    font-weight: bolder;
+    margin: 3.5rem 0 0 0;
+    padding: 3.5rem 0 0 0;
+    font-size: 100%;
+    margin-bottom: .5rem;
+}
+
+.dets .species {
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
+    text-transform: capitalize;
+}
+
+.dets .height {
+    margin: .2rem 0 0 0;
+    padding: .2rem 0 0 0;
+}
+
+.dets .weight {
+    margin: .2rem 0 0 0;
+    padding: .2rem 0 0 0;
+}
+
+.dets .abilities {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dets .abilities .ability {
+    color: white;
+    display: inline-block;
+    padding: .25rem .5rem;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    font-weight: bold;
+}
+
+.dets .stats .HP {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.dets .stats .Attack {
+    margin-top: .2rem;
+    padding-top: .2em;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.dets .stats .Defense {
+    margin-top: .2rem;
+    padding-top: .2em;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.dets .stats .Speed {
+    margin-top: .2rem;
+    padding-top: .2em;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.dets .stats .HP .pb {
+    background-color: lightgray;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.dets .stats .Attack .pb {
+    background-color: lightgray;
+    border-radius: 1rem;
+    width: 100%;
+}
+.dets .stats .Defense .pb {
+    background-color: lightgray;
+    border-radius: 1rem;
+    width: 100%;
+}
+.dets .stats .Speed .pb {
+    background-color: lightgray;
+    border-radius: 1rem;
+    width: 100%;
 }
 
 .metadata .detail {
