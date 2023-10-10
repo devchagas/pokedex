@@ -7,7 +7,13 @@ function showPokemonDetails(pokemon) {
     showDetail.innerHTML =
     `
     <div class="metadata ${pokemon.type}">
-        <h1>${pokemon.name}</h1>
+        <div class="title">
+            <h1>${pokemon.name}</h1>
+
+            <button class="${pokemon.type}" id="back" type="button" onClick="redirectHome()">
+                <img src="assets/images/pokemon-icon.webp">
+            </button>
+        </div>
 
         <div class="detail">
             <ol class="types">
@@ -80,11 +86,12 @@ fetch(endPoint + new URLSearchParams(location.search).get('id'))
     .then((response) => response.json())
     .then(data => convertPokeAPItoModel(data))
     .then(pokemon => showPokemonDetails(pokemon))
-    
+
+function redirectHome() {
+    window.open('index.html', '_self');
+}    
     
    
-
-
 
 
 

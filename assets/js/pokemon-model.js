@@ -9,4 +9,6 @@ class Pokemon {
     abilities = [];
     HP;
     Attack;
+    Defense;
+    Speed;
 }
