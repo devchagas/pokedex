@@ -15,6 +15,14 @@ body {
     background-color: whitesmoke;
 }
 
+.content-detail {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color:#d7e0f1;
+}
+
+
 @media screen and (min-width: 992px) {
     .content {
         height: auto;
